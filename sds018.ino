@@ -35,8 +35,8 @@ void loop() {
         uint8_t pm10Low   = mPkt[4];
         uint8_t pm10High  = mPkt[5];
   
-        float pm25 = ( ( pm25High * 256 ) + pm25Low ) / 10;
-        float pm10 = ( ( pm10High * 256 ) + pm10Low ) / 10;
+        float pm25 = ( ( pm25High * 256.0 ) + pm25Low ) / 10.0;
+        float pm10 = ( ( pm10High * 256.0 ) + pm10Low ) / 10.0;
         
         Serial.print( "PM2.5: " );
         Serial.print( pm25 );
